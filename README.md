@@ -30,13 +30,15 @@ python3 -m http.server 8080
 3. 如需更换密码：用离线脚本对 `salt + password` 做 SHA-256，更新 `js/auth-config.js` 中的 `hash`（切勿提交明文密码）。
 4. `git add` → `commit` → `push origin main`；Pages 通常一两分钟内刷新。
 
+预测 vs 真实图使用 [lightweight-charts](https://github.com/tradingview/lightweight-charts) 渲染蜡烛图（K 线），并叠加 T+1/T+5 目标价与方向标记；未到期样本不显示命中/未中。
+
 ## 数据文件
 
 | 文件 | 内容 |
 | --- | --- |
 | `data/latest.json` | 最新信号摘要与 T+1/T+5 |
 | `data/factors.json` | 技术面 / 基本面因子列表 + 面板最新行 |
-| `data/history.json` | 价格序列、信号标记、预测 vs 真实 |
+| `data/history.json` | 主力 OHLC K 线、~半年 walk-forward 预测 vs 真实、信号标记 |
 | `data/method.json` | 流水线说明与研究闸门 |
 
 ## 免责声明

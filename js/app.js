@@ -173,20 +173,32 @@
   }
 
   function renderHistory(data) {
-    const dates = (data.available_signal_dates || []).join("、") || "无";
-    $("#history-meta").textContent = `可复原信号 asof：${dates} · 价格点 ${ (data.price_series || []).length }`;
+    const wf = data.walkforward;
+    const n = (data.comparisons || []).length;
+    const dates = data.available_signal_dates || [];
+    const range =
+      dates.length > 1 ? `${dates[0]} → ${dates[dates.length - 1]}` : dates[0] || "无";
+    let meta = `Walk-forward ${n} 日 · ${range} · K线 ${ (data.candles || []).length }`;
+    if (wf?.hit_rates) {
+      const t1 = wf.hit_rates.t1 != null ? `${(wf.hit_rates.t1 * 100).toFixed(1)}%` : "—";
+      const t5 = wf.hit_rates.t5 != null ? `${(wf.hit_rates.t5 * 100).toFixed(1)}%` : "—";
+      meta += ` · T+1命中 ${t1} / T+5命中 ${t5}`;
+    }
+    $("#history-meta").textContent = meta;
 
     const notes = $("#history-notes");
     notes.innerHTML = "";
-    for (const n of data.notes || []) {
+    for (const ntxt of data.notes || []) {
       const li = document.createElement("li");
-      li.textContent = n;
+      li.textContent = ntxt;
       notes.appendChild(li);
     }
 
     const tbody = $("#cmp-table tbody");
     tbody.innerHTML = "";
-    for (const c of data.comparisons || []) {
+    // Newest first for scanning; chart stays chronological
+    const rows = [...(data.comparisons || [])].reverse();
+    for (const c of rows) {
       const tr = document.createElement("tr");
       const t1Pred = `${dirZh(c.t1_direction)} ${fmtPct(c.t1_probability)} → ${fmtNum(c.t1_predicted_price, 0)}`;
       const t5Pred = `${dirZh(c.t5_direction)} ${fmtPct(c.t5_probability)} → ${fmtNum(c.t5_predicted_price, 0)}`;
@@ -210,121 +222,159 @@
       tbody.appendChild(tr);
     }
 
-    renderChart(data);
+    renderCandleChart(data);
   }
 
-  function renderChart(data) {
-    const canvas = $("#price-chart");
-    if (!window.Chart || !canvas) return;
-    const series = data.price_series || [];
-    const markers = data.signal_markers || [];
-    const labels = series.map((p) => p.date);
-    const closes = series.map((p) => p.close);
+  function toUnix(dateStr) {
+    // Exchange session date as UTC midnight for lightweight-charts
+    return Math.floor(new Date(dateStr + "T00:00:00Z").getTime() / 1000);
+  }
 
-    const markerByDate = Object.fromEntries(markers.map((m) => [m.asof_date, m]));
-    const markerPoints = series.map((p) => {
-      const m = markerByDate[p.date];
-      return m ? m.entry_close : null;
-    });
+  function renderCandleChart(data) {
+    const host = $("#candle-chart");
+    if (!host || !window.LightweightCharts) {
+      const fallback = $("#price-chart");
+      if (fallback && window.Chart) {
+        // legacy line fallback only if candle host missing
+        console.warn("lightweight-charts unavailable; skip K-line");
+      }
+      return;
+    }
 
-    // Predicted T+1 / T+5 target overlays as scattered points on asof dates
-    const t1Targets = series.map((p) => {
-      const m = markerByDate[p.date];
-      // find comparison for predicted prices
-      const cmp = (data.comparisons || []).find((c) => c.asof_date === p.date);
-      return cmp ? cmp.t1_predicted_price : null;
-    });
-    const t5Targets = series.map((p) => {
-      const cmp = (data.comparisons || []).find((c) => c.asof_date === p.date);
-      return cmp ? cmp.t5_predicted_price : null;
-    });
+    const candles = (data.candles || []).filter(
+      (c) => c && c.date && c.open != null && c.high != null && c.low != null && c.close != null
+    );
+    if (!candles.length) {
+      host.innerHTML = '<p class="hint" style="padding:1rem">暂无 OHLC K 线数据</p>';
+      return;
+    }
 
-    if (window.__priceChart) window.__priceChart.destroy();
-    window.__priceChart = new Chart(canvas, {
-      type: "line",
-      data: {
-        labels,
-        datasets: [
-          {
-            label: "主力连续收盘价",
-            data: closes,
-            borderColor: "#3dd6c6",
-            backgroundColor: "rgba(61, 214, 198, 0.12)",
-            fill: true,
-            tension: 0.15,
-            pointRadius: 0,
-            borderWidth: 2,
-          },
-          {
-            label: "信号日",
-            data: markerPoints,
-            borderColor: "#e6b450",
-            backgroundColor: "#e6b450",
-            showLine: false,
-            pointRadius: 5,
-            pointHoverRadius: 7,
-          },
-          {
-            label: "T+1 目标价",
-            data: t1Targets,
-            borderColor: "#7aa2ff",
-            backgroundColor: "#7aa2ff",
-            showLine: false,
-            pointStyle: "triangle",
-            pointRadius: 6,
-          },
-          {
-            label: "T+5 目标价",
-            data: t5Targets,
-            borderColor: "#c792ea",
-            backgroundColor: "#c792ea",
-            showLine: false,
-            pointStyle: "rectRot",
-            pointRadius: 6,
-          },
-        ],
+    host.innerHTML = "";
+    if (window.__candleChart) {
+      try {
+        window.__candleChart.remove();
+      } catch (_) {}
+      window.__candleChart = null;
+    }
+
+    const chart = window.LightweightCharts.createChart(host, {
+      layout: {
+        background: { color: "#243044" },
+        textColor: "#9aa8bc",
       },
-      options: {
-        responsive: true,
-        maintainAspectRatio: true,
-        interaction: { mode: "index", intersect: false },
-        plugins: {
-          legend: {
-            labels: { color: "#9aa8bc", boxWidth: 12 },
-          },
-          tooltip: {
-            callbacks: {
-              afterBody(items) {
-                const idx = items[0]?.dataIndex;
-                if (idx == null) return [];
-                const date = labels[idx];
-                const m = markerByDate[date];
-                if (!m) return [];
-                return [
-                  `信号: ${m.signal || "—"}`,
-                  `T+1 概率: ${fmtPct(m.t1_probability)}`,
-                  `T+5 概率: ${fmtPct(m.t5_probability)}`,
-                ];
-              },
-            },
-          },
-        },
-        scales: {
-          x: {
-            ticks: {
-              color: "#9aa8bc",
-              maxTicksLimit: 8,
-              maxRotation: 0,
-            },
-            grid: { color: "rgba(45,58,79,0.6)" },
-          },
-          y: {
-            ticks: { color: "#9aa8bc" },
-            grid: { color: "rgba(45,58,79,0.6)" },
-          },
-        },
+      grid: {
+        vertLines: { color: "rgba(45,58,79,0.6)" },
+        horzLines: { color: "rgba(45,58,79,0.6)" },
       },
+      rightPriceScale: { borderColor: "#2d3a4f" },
+      timeScale: {
+        borderColor: "#2d3a4f",
+        timeVisible: false,
+      },
+      crosshair: { mode: 1 },
+      autoSize: true,
     });
+    window.__candleChart = chart;
+
+    const series = chart.addCandlestickSeries({
+      upColor: "#3ecf8e",
+      downColor: "#f07178",
+      borderUpColor: "#3ecf8e",
+      borderDownColor: "#f07178",
+      wickUpColor: "#3ecf8e",
+      wickDownColor: "#f07178",
+    });
+    series.setData(
+      candles.map((c) => ({
+        time: c.date,
+        open: c.open,
+        high: c.high,
+        low: c.low,
+        close: c.close,
+      }))
+    );
+
+    // Predicted target overlays as line series (values known at asof; no future leak on chart)
+    const cmpByDate = Object.fromEntries(
+      (data.comparisons || []).map((c) => [c.asof_date, c])
+    );
+    const t1Line = [];
+    const t5Line = [];
+    for (const c of candles) {
+      const cmp = cmpByDate[c.date];
+      if (!cmp) continue;
+      if (cmp.t1_predicted_price != null) {
+        t1Line.push({ time: c.date, value: Number(cmp.t1_predicted_price) });
+      }
+      if (cmp.t5_predicted_price != null) {
+        t5Line.push({ time: c.date, value: Number(cmp.t5_predicted_price) });
+      }
+    }
+    if (t1Line.length) {
+      const s1 = chart.addLineSeries({
+        color: "#7aa2ff",
+        lineWidth: 1,
+        lineStyle: 2,
+        title: "T+1 目标价",
+        lastValueVisible: false,
+        priceLineVisible: false,
+      });
+      s1.setData(t1Line);
+    }
+    if (t5Line.length) {
+      const s5 = chart.addLineSeries({
+        color: "#c792ea",
+        lineWidth: 1,
+        lineStyle: 2,
+        title: "T+5 目标价",
+        lastValueVisible: false,
+        priceLineVisible: false,
+      });
+      s5.setData(t5Line);
+    }
+
+    // Signal markers: shape by direction; text only for matured hit/miss on T+1
+    const markers = [];
+    for (const c of data.comparisons || []) {
+      if (!c.asof_date || !cmpByDate[c.asof_date]) continue;
+      // only mark days that exist on candle axis
+      if (!candles.some((x) => x.date === c.asof_date)) continue;
+      const up = c.t1_direction === "up";
+      let text = up ? "↑" : "↓";
+      if (c.matured_t1 === true) {
+        text += c.t1_direction_hit ? "✓" : "✗";
+      } else {
+        // unmatured: direction only, do not show hit/miss
+        text += "·";
+      }
+      markers.push({
+        time: c.asof_date,
+        position: up ? "belowBar" : "aboveBar",
+        color: up ? "#3ecf8e" : "#f07178",
+        shape: up ? "arrowUp" : "arrowDown",
+        text,
+      });
+    }
+    if (markers.length) {
+      series.setMarkers(markers);
+    }
+
+    const legend = document.createElement("div");
+    legend.className = "chart-legend";
+    legend.innerHTML =
+      '<span class="lg-up">涨</span><span class="lg-down">跌</span>' +
+      '<span class="lg-t1">T+1 目标</span><span class="lg-t5">T+5 目标</span>' +
+      '<span class="lg-mark">箭头=信号方向；✓/✗ 仅已到期 T+1；未到期显示 ·</span>';
+    host.appendChild(legend);
+
+    chart.timeScale().fitContent();
+
+    // Resize observer
+    if (window.__candleRo) window.__candleRo.disconnect();
+    window.__candleRo = new ResizeObserver(() => {
+      // autoSize handles most cases
+    });
+    window.__candleRo.observe(host);
   }
 
   async function main() {
@@ -347,7 +397,8 @@
   }
 
   function startWhenReady() {
-    if (window.__DASH_UNLOCKED) {
+    const needsAuth = Boolean(document.getElementById("auth-gate") || window.DASH_AUTH);
+    if (!needsAuth || window.__DASH_UNLOCKED) {
       main();
       return;
     }

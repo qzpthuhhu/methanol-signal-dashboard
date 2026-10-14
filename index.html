@@ -6,7 +6,7 @@
   <title>甲醇主力预测看板</title>
   <meta name="description" content="甲醇期货 MA 主力 T+1/T+5 研究预测看板（静态页）" />
   <link rel="stylesheet" href="css/style.css" />
-  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.6/dist/chart.umd.min.js" defer></script>
+  <script src="https://unpkg.com/lightweight-charts@4.2.1/dist/lightweight-charts.standalone.production.js"></script>
   <script src="js/auth-config.js" defer></script>
   <script src="js/auth.js" defer></script>
   <script src="js/app.js" defer></script>
@@ -94,7 +94,7 @@
         <span class="hint" id="history-meta"></span>
       </div>
       <div class="chart-wrap">
-        <canvas id="price-chart" height="120"></canvas>
+        <div id="candle-chart" class="candle-chart" role="img" aria-label="甲醇主力 K 线与预测标记"></div>
       </div>
       <div class="table-scroll">
         <table id="cmp-table">
