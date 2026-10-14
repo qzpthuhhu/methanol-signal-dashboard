@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>甲醇主力预测看板</title>
+  <meta name="description" content="甲醇期货 MA 主力 T+1/T+5 研究预测看板（静态页）" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.6/dist/chart.umd.min.js" defer></script>
+  <script src="js/auth-config.js" defer></script>
+  <script src="js/auth.js" defer></script>
+  <script src="js/app.js" defer></script>
+</head>
+<body>
+
+  <div id="auth-gate" class="auth-gate" hidden>
+    <div class="auth-card">
+      <h2>甲醇主力预测看板</h2>
+      <p class="auth-hint">请输入访问密码</p>
+      <form id="auth-form" autocomplete="off">
+        <input id="auth-password" type="password" name="password" placeholder="访问密码" required autofocus />
+        <button type="submit">进入看板</button>
+      </form>
+      <p id="auth-error" class="auth-error" hidden>密码错误</p>
+    </div>
+  </div>
+
+  <header class="top">
+    <div class="wrap">
+      <div class="brand">
+        <h1>甲醇主力预测看板</h1>
+        <p class="sub">MA 日度 T+1 / T+5 · 静态研究展示</p>
+      </div>
+      <div id="badge-row" class="badges"></div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="card" id="sec-latest">
+      <div class="card-head">
+        <h2>最新预测</h2>
+        <span class="hint" id="latest-meta"></span>
+      </div>
+      <pre class="summary" id="latest-summary">加载中…</pre>
+      <div class="grid metrics" id="latest-metrics"></div>
+      <div class="forecast-cards" id="forecast-cards"></div>
+    </section>
+
+    <section class="card" id="sec-method">
+      <div class="card-head">
+        <h2>预测方法</h2>
+      </div>
+      <p class="lead" id="method-lead"></p>
+      <ol class="steps" id="method-steps"></ol>
+      <p class="disclaimer" id="method-disclaimer"></p>
+    </section>
+
+    <section class="card" id="sec-factors">
+      <div class="card-head">
+        <h2>因子</h2>
+        <span class="hint" id="factors-meta"></span>
+      </div>
+      <div class="factor-cols">
+        <div>
+          <h3>技术面 <small>（T+1）</small></h3>
+          <ul class="factor-list" id="tech-list"></ul>
+        </div>
+        <div>
+          <h3>基本面 <small>（T+5）</small></h3>
+          <ul class="factor-list" id="fund-list"></ul>
+        </div>
+      </div>
+      <div id="overlay-block" class="overlay-block" hidden>
+        <h3>基本面叠加快照</h3>
+        <div class="table-scroll">
+          <table id="overlay-table">
+            <thead>
+              <tr>
+                <th>因子</th>
+                <th>数值</th>
+                <th>方向</th>
+                <th>备注</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="card" id="sec-history">
+      <div class="card-head">
+        <h2>预测 vs 真实</h2>
+        <span class="hint" id="history-meta"></span>
+      </div>
+      <div class="chart-wrap">
+        <canvas id="price-chart" height="120"></canvas>
+      </div>
+      <div class="table-scroll">
+        <table id="cmp-table">
+          <thead>
+            <tr>
+              <th>asof</th>
+              <th>合约</th>
+              <th>收盘</th>
+              <th>建议</th>
+              <th>T+1 预测</th>
+              <th>T+1 真实</th>
+              <th>T+1 命中</th>
+              <th>T+5 预测</th>
+              <th>T+5 真实</th>
+              <th>T+5 命中</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <ul class="notes" id="history-notes"></ul>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap">
+      <p>数据来自导出 JSON 摘要 · 无 API Key · 静态 GitHub Pages</p>
+      <p id="export-stamp"></p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,79 @@
+{
+  "exported_at": "2026-10-14T12:02:08",
+  "title": "甲醇主力日度 MA T+1 / T+5 预测流水线",
+  "research_only": true,
+  "pipeline_steps": [
+    {
+      "step": 1,
+      "name": "识别主力合约",
+      "detail": "按 config/rollover.json 规则（成交量优先、向前换月、连续确认）从公开 MA 合约日线重建主力序列。"
+    },
+    {
+      "step": 2,
+      "name": "组装特征",
+      "detail": "T+1 使用技术面特征（收益、波动、均线偏离、量仓、卡尔曼）；T+5 使用基本面面板（库存、开工、下游利润、煤价、宏观等）。"
+    },
+    {
+      "step": 3,
+      "name": "分期限模型预测",
+      "detail": "src/methanol_specified_contract_predictor.py + src/daily_ma610_signal.py：对指定主力合约在 asof 收盘后输出 T+1 / T+5 上涨概率、预期收益与目标价。"
+    },
+    {
+      "step": 4,
+      "name": "信号规则",
+      "detail": "T+1 看跌→卖出；T+5 看跌且 T+1 看涨→持有警戒；两者均看涨→持有。"
+    },
+    {
+      "step": 5,
+      "name": "研究闸门",
+      "detail": "方向准确率与收益符号准确率需通过约 55% 验证闸门；未通过则标记 research-only，不作为实盘建议。"
+    }
+  ],
+  "entrypoint": "PYTHONPATH=src python src/daily_ma610_signal.py",
+  "docs": [
+    "docs/methodology.md",
+    "skills/methanol-trading-signal/SKILL.md"
+  ],
+  "gate": {
+    "research_only": true,
+    "reason": "Current model fails the 55% direction and return-sign validation gate; outputs are research-only.",
+    "metrics": {
+      "1": {
+        "horizon_days": 1,
+        "cases": 30,
+        "direction_accuracy": 0.5,
+        "direction_auc": 0.52,
+        "return_mae": 0.01593489807239641,
+        "return_rmse": 0.02051468429784424,
+        "return_sign_accuracy": 0.5,
+        "return_bias": 0.0007870513152215599,
+        "price_mae": 44.14645065728632,
+        "round_trip_cost_assumption": 0.001,
+        "active_trades": 8,
+        "strategy_return_after_cost": -0.002554956876485548,
+        "buy_hold_return_same_cases": -0.03262791368065321,
+        "strategy_max_drawdown_after_cost": -0.033125205930807256,
+        "trade_win_rate": 0.5
+      },
+      "5": {
+        "horizon_days": 5,
+        "cases": 30,
+        "direction_accuracy": 0.6,
+        "direction_auc": 0.6470588235294118,
+        "return_mae": 0.0420411232320482,
+        "return_rmse": 0.05290259939504713,
+        "return_sign_accuracy": 0.5,
+        "return_bias": -0.0010548408111601256,
+        "price_mae": 110.60250011272556,
+        "round_trip_cost_assumption": 0.001,
+        "active_trades": 15,
+        "strategy_return_after_cost": 0.022082459702981172,
+        "buy_hold_return_same_cases": 0.09767116209153492,
+        "strategy_max_drawdown_after_cost": -0.18392658549822494,
+        "trade_win_rate": 0.5333333333333333
+      }
+    },
+    "model_id": "contract_split_horizon_hf_v1"
+  },
+  "disclaimer": "本页面仅用于研究展示。模型分数为排序输出，非校准概率；不构成投资建议，不会下单。"
+}

@@ -1,0 +1,348 @@
+{
+  "exported_at": "2026-10-14T12:02:08",
+  "asof_date": "2026-10-13",
+  "panel_latest": {
+    "date": "2026-10-13",
+    "non_null_count": 20,
+    "values": {
+      "mto_profit": -3249.0,
+      "ma_spot_price": 3883.33,
+      "coal_q5500_daily": 996.0,
+      "coal_q5500": 996.0,
+      "qhd_coal_inventory": 586.0,
+      "bohai_coal_inventory": 2394.2,
+      "power_coal_consumption": 82.96,
+      "power_coal_inventory": 1438.9,
+      "pp_future": 9351.0,
+      "pe_spot": 9950.0,
+      "mtbe_price": 8300.0,
+      "acetic_acid_price": 4860.0,
+      "dme_price": 5866.67,
+      "propylene_profit": -3599.0,
+      "henry_hub_ng": 3.1352,
+      "china_lng_import": 516.0,
+      "wti_crude": 94.77,
+      "bdi": 2801.0,
+      "scfi": 3664.11,
+      "ccsfi": 954.19
+    }
+  },
+  "mapping_note": "基本面列名对齐 data/derived/ifind/MAPPING.md 与 src/methanol_feature_contracts.py FUNDAMENTAL_FEATURES；技术面来自最新信号 JSON 的 features_per_horizon['1']。",
+  "technical": [
+    {
+      "id": "ret_1d",
+      "label_zh": "1日收益率",
+      "kind": "technical",
+      "panel_value": null
+    },
+    {
+      "id": "ret_3d",
+      "label_zh": "3日收益率",
+      "kind": "technical",
+      "panel_value": null
+    },
+    {
+      "id": "ret_5d",
+      "label_zh": "5日收益率",
+      "kind": "technical",
+      "panel_value": null
+    },
+    {
+      "id": "volatility_10d",
+      "label_zh": "10日波动率",
+      "kind": "technical",
+      "panel_value": null
+    },
+    {
+      "id": "ma10_bias",
+      "label_zh": "MA10偏离度",
+      "kind": "technical",
+      "panel_value": null
+    },
+    {
+      "id": "ma20_bias",
+      "label_zh": "MA20偏离度",
+      "kind": "technical",
+      "panel_value": null
+    },
+    {
+      "id": "volume_ratio_5",
+      "label_zh": "5日量比",
+      "kind": "technical",
+      "panel_value": null
+    },
+    {
+      "id": "open_interest_change_1d",
+      "label_zh": "持仓量1日变化",
+      "kind": "technical",
+      "panel_value": null
+    },
+    {
+      "id": "open_interest_change_5d",
+      "label_zh": "持仓量5日变化",
+      "kind": "technical",
+      "panel_value": null
+    },
+    {
+      "id": "kalman_slope_pct",
+      "label_zh": "卡尔曼斜率(%)",
+      "kind": "technical",
+      "panel_value": null
+    },
+    {
+      "id": "kalman_residual_pct",
+      "label_zh": "卡尔曼残差(%)",
+      "kind": "technical",
+      "panel_value": null
+    }
+  ],
+  "fundamental": [
+    {
+      "id": "exchange_rate",
+      "label_zh": "汇率(USD/CNY)",
+      "kind": "fundamental",
+      "panel_value": null
+    },
+    {
+      "id": "pe_ma_spread",
+      "label_zh": "PE-MA价差",
+      "kind": "fundamental",
+      "panel_value": null
+    },
+    {
+      "id": "port_total_lz",
+      "label_zh": "港口库存(隆众)",
+      "kind": "fundamental",
+      "panel_value": null
+    },
+    {
+      "id": "operating_rate",
+      "label_zh": "甲醇开工率",
+      "kind": "fundamental",
+      "panel_value": null
+    },
+    {
+      "id": "mto_rate",
+      "label_zh": "MTO开工率",
+      "kind": "fundamental",
+      "panel_value": null
+    },
+    {
+      "id": "enterprise_inventory",
+      "label_zh": "内地企业库存",
+      "kind": "fundamental",
+      "panel_value": null
+    },
+    {
+      "id": "mto_profit",
+      "label_zh": "MTO利润",
+      "kind": "fundamental",
+      "panel_value": -3249.0
+    },
+    {
+      "id": "ma_spot_price",
+      "label_zh": "甲醇现货价",
+      "kind": "fundamental",
+      "panel_value": 3883.33
+    },
+    {
+      "id": "coal_q5500_daily",
+      "label_zh": "动力煤5500日度价",
+      "kind": "fundamental",
+      "panel_value": 996.0
+    },
+    {
+      "id": "coal_q5500",
+      "label_zh": "秦皇岛5500动力煤",
+      "kind": "fundamental",
+      "panel_value": 996.0
+    },
+    {
+      "id": "qhd_coal_inventory",
+      "label_zh": "秦皇岛煤炭库存",
+      "kind": "fundamental",
+      "panel_value": 586.0
+    },
+    {
+      "id": "bohai_coal_inventory",
+      "label_zh": "环渤海煤炭库存",
+      "kind": "fundamental",
+      "panel_value": 2394.2
+    },
+    {
+      "id": "power_coal_consumption",
+      "label_zh": "电厂日耗煤",
+      "kind": "fundamental",
+      "panel_value": 82.96
+    },
+    {
+      "id": "power_coal_inventory",
+      "label_zh": "电厂煤炭库存",
+      "kind": "fundamental",
+      "panel_value": 1438.9
+    },
+    {
+      "id": "power_coal_inventory_south",
+      "label_zh": "南方电厂煤炭库存",
+      "kind": "fundamental",
+      "panel_value": null
+    },
+    {
+      "id": "pp_future",
+      "label_zh": "PP期货",
+      "kind": "fundamental",
+      "panel_value": 9351.0
+    },
+    {
+      "id": "pe_spot",
+      "label_zh": "PE现货",
+      "kind": "fundamental",
+      "panel_value": 9950.0
+    },
+    {
+      "id": "mtbe_price",
+      "label_zh": "MTBE价格",
+      "kind": "fundamental",
+      "panel_value": 8300.0
+    },
+    {
+      "id": "acetic_acid_price",
+      "label_zh": "醋酸价格",
+      "kind": "fundamental",
+      "panel_value": 4860.0
+    },
+    {
+      "id": "dme_price",
+      "label_zh": "二甲醚价格",
+      "kind": "fundamental",
+      "panel_value": 5866.67
+    },
+    {
+      "id": "propylene_profit",
+      "label_zh": "丙烯利润",
+      "kind": "fundamental",
+      "panel_value": -3599.0
+    },
+    {
+      "id": "henry_hub_ng",
+      "label_zh": "Henry Hub天然气",
+      "kind": "fundamental",
+      "panel_value": 3.1352
+    },
+    {
+      "id": "china_lng_import",
+      "label_zh": "中国LNG进口",
+      "kind": "fundamental",
+      "panel_value": 516.0
+    },
+    {
+      "id": "wti_crude",
+      "label_zh": "WTI原油",
+      "kind": "fundamental",
+      "panel_value": 94.77
+    },
+    {
+      "id": "bdi",
+      "label_zh": "波罗的海干散货指数(BDI)",
+      "kind": "fundamental",
+      "panel_value": 2801.0
+    },
+    {
+      "id": "chem_ppi",
+      "label_zh": "化工PPI",
+      "kind": "fundamental",
+      "panel_value": null
+    },
+    {
+      "id": "scfi",
+      "label_zh": "SCFI综合指数",
+      "kind": "fundamental",
+      "panel_value": 3664.11
+    },
+    {
+      "id": "ccsfi",
+      "label_zh": "长江煤炭航运指数(CCSFI)",
+      "kind": "fundamental",
+      "panel_value": 954.19
+    },
+    {
+      "id": "auto_production",
+      "label_zh": "汽车产量",
+      "kind": "fundamental",
+      "panel_value": null
+    }
+  ],
+  "overlay_snapshots": [
+    {
+      "factor": "port_inventory_mt",
+      "label": "港口库存",
+      "value": 64.15,
+      "unit": "万吨",
+      "available_from": "2026-09-10",
+      "age_days": 33,
+      "freshness_weight": 0.0,
+      "percentile": 0.5,
+      "signal_direction": "中性",
+      "signal": 0.0,
+      "contribution": 0.0,
+      "note": "数据过期（33 天前，超过 21 天上限）"
+    },
+    {
+      "factor": "enterprise_inventory_mt",
+      "label": "内地工厂库存",
+      "value": 29.81,
+      "unit": "万吨",
+      "available_from": "2026-09-07",
+      "age_days": 36,
+      "freshness_weight": 0.0,
+      "percentile": 0.5,
+      "signal_direction": "中性",
+      "signal": 0.0,
+      "contribution": 0.0,
+      "note": "数据过期（36 天前，超过 21 天上限）"
+    },
+    {
+      "factor": "utilization_pct",
+      "label": "甲醇开工率",
+      "value": 82.5,
+      "unit": "%",
+      "available_from": "2026-09-07",
+      "age_days": 36,
+      "freshness_weight": 0.0,
+      "percentile": 0.5,
+      "signal_direction": "中性",
+      "signal": 0.0,
+      "contribution": 0.0,
+      "note": "数据过期（36 天前，超过 21 天上限）"
+    },
+    {
+      "factor": "mto_utilization_pct",
+      "label": "MTO 开工率",
+      "value": 62.81,
+      "unit": "%",
+      "available_from": "2026-09-04",
+      "age_days": 39,
+      "freshness_weight": 0.0,
+      "percentile": 0.5,
+      "signal_direction": "中性",
+      "signal": 0.0,
+      "contribution": 0.0,
+      "note": "数据过期（39 天前，超过 21 天上限）"
+    },
+    {
+      "factor": "import_discharge_mt",
+      "label": "外轮卸入",
+      "value": 14.92,
+      "unit": "万吨",
+      "available_from": "2026-09-07",
+      "age_days": 36,
+      "freshness_weight": 0.0,
+      "percentile": 0.5,
+      "signal_direction": "中性",
+      "signal": 0.0,
+      "contribution": 0.0,
+      "note": "数据过期（36 天前，超过 21 天上限）"
+    }
+  ],
+  "mapping_path": "data/derived/ifind/MAPPING.md"
+}

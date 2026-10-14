@@ -1,0 +1,1198 @@
+{
+  "exported_at": "2026-10-14T12:02:08",
+  "price_series": [
+    {
+      "date": "2026-01-12",
+      "close": 2263.0,
+      "symbol": "MA605",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-01-13",
+      "close": 2263.0,
+      "symbol": "MA605",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-01-14",
+      "close": 2288.0,
+      "symbol": "MA605",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-01-15",
+      "close": 2273.0,
+      "symbol": "MA605",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-01-16",
+      "close": 2239.0,
+      "symbol": "MA605",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-01-19",
+      "close": 2212.0,
+      "symbol": "MA605",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-01-20",
+      "close": 2206.0,
+      "symbol": "MA605",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-01-21",
+      "close": 2209.0,
+      "symbol": "MA605",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-01-22",
+      "close": 2260.0,
+      "symbol": "MA605",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-01-23",
+      "close": 2298.0,
+      "symbol": "MA605",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-01-26",
+      "close": 2347.0,
+      "symbol": "MA605",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-01-27",
+      "close": 2304.0,
+      "symbol": "MA605",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-01-28",
+      "close": 2339.0,
+      "symbol": "MA605",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-01-29",
+      "close": 2352.0,
+      "symbol": "MA605",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-01-30",
+      "close": 2320.0,
+      "symbol": "MA605",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-02-02",
+      "close": 2252.0,
+      "symbol": "MA605",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-02-03",
+      "close": 2247.0,
+      "symbol": "MA605",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-02-04",
+      "close": 2279.0,
+      "symbol": "MA605",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-02-05",
+      "close": 2225.0,
+      "symbol": "MA605",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-02-06",
+      "close": 2244.0,
+      "symbol": "MA605",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-02-09",
+      "close": 2231.0,
+      "symbol": "MA605",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-02-10",
+      "close": 2241.0,
+      "symbol": "MA605",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-02-11",
+      "close": 2248.0,
+      "symbol": "MA605",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-02-12",
+      "close": 2231.0,
+      "symbol": "MA605",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-02-13",
+      "close": 2188.0,
+      "symbol": "MA605",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-02-24",
+      "close": 2285.0,
+      "symbol": "MA605",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-02-25",
+      "close": 2249.0,
+      "symbol": "MA605",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-02-26",
+      "close": 2210.0,
+      "symbol": "MA605",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-02-27",
+      "close": 2179.0,
+      "symbol": "MA605",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-03-02",
+      "close": 2365.0,
+      "symbol": "MA605",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-03-03",
+      "close": 2557.0,
+      "symbol": "MA605",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-03-04",
+      "close": 2553.0,
+      "symbol": "MA605",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-03-05",
+      "close": 2487.0,
+      "symbol": "MA605",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-03-06",
+      "close": 2586.0,
+      "symbol": "MA605",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-03-09",
+      "close": 2830.0,
+      "symbol": "MA605",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-03-10",
+      "close": 2549.0,
+      "symbol": "MA605",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-03-11",
+      "close": 2658.0,
+      "symbol": "MA605",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-03-12",
+      "close": 2726.0,
+      "symbol": "MA605",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-03-13",
+      "close": 2805.0,
+      "symbol": "MA605",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-03-16",
+      "close": 2837.0,
+      "symbol": "MA605",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-03-17",
+      "close": 2847.0,
+      "symbol": "MA605",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-03-18",
+      "close": 2912.0,
+      "symbol": "MA605",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-03-19",
+      "close": 3182.0,
+      "symbol": "MA605",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-03-20",
+      "close": 3132.0,
+      "symbol": "MA605",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-03-23",
+      "close": 3351.0,
+      "symbol": "MA605",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-03-24",
+      "close": 3139.0,
+      "symbol": "MA605",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-03-25",
+      "close": 3089.0,
+      "symbol": "MA605",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-03-26",
+      "close": 3202.0,
+      "symbol": "MA605",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-03-27",
+      "close": 3296.0,
+      "symbol": "MA605",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-03-30",
+      "close": 3319.0,
+      "symbol": "MA605",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-03-31",
+      "close": 3229.0,
+      "symbol": "MA605",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-04-01",
+      "close": 3014.0,
+      "symbol": "MA605",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-04-02",
+      "close": 3246.0,
+      "symbol": "MA605",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-04-03",
+      "close": 3364.0,
+      "symbol": "MA605",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-04-07",
+      "close": 3553.0,
+      "symbol": "MA605",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-04-08",
+      "close": 3122.0,
+      "symbol": "MA605",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-04-09",
+      "close": 3205.0,
+      "symbol": "MA605",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-04-10",
+      "close": 3114.0,
+      "symbol": "MA605",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-04-13",
+      "close": 3175.0,
+      "symbol": "MA605",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-04-14",
+      "close": 3122.0,
+      "symbol": "MA605",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-04-15",
+      "close": 3155.0,
+      "symbol": "MA605",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-04-16",
+      "close": 3188.0,
+      "symbol": "MA605",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-04-17",
+      "close": 3173.0,
+      "symbol": "MA605",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-04-20",
+      "close": 3122.0,
+      "symbol": "MA605",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-04-21",
+      "close": 2824.0,
+      "symbol": "MA609",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-04-22",
+      "close": 2848.0,
+      "symbol": "MA609",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-04-23",
+      "close": 2879.0,
+      "symbol": "MA609",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-04-24",
+      "close": 2895.0,
+      "symbol": "MA609",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-04-27",
+      "close": 2939.0,
+      "symbol": "MA609",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-04-28",
+      "close": 3020.0,
+      "symbol": "MA609",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-04-29",
+      "close": 3007.0,
+      "symbol": "MA609",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-04-30",
+      "close": 3009.0,
+      "symbol": "MA609",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-05-06",
+      "close": 3045.0,
+      "symbol": "MA609",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-05-07",
+      "close": 2870.0,
+      "symbol": "MA609",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-05-08",
+      "close": 2855.0,
+      "symbol": "MA609",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-05-11",
+      "close": 2882.0,
+      "symbol": "MA609",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-05-12",
+      "close": 2915.0,
+      "symbol": "MA609",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-05-13",
+      "close": 2906.0,
+      "symbol": "MA609",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-05-14",
+      "close": 2860.0,
+      "symbol": "MA609",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-05-15",
+      "close": 2907.0,
+      "symbol": "MA609",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-05-18",
+      "close": 2979.0,
+      "symbol": "MA609",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-05-19",
+      "close": 2963.0,
+      "symbol": "MA609",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-05-20",
+      "close": 2968.0,
+      "symbol": "MA609",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-05-21",
+      "close": 2963.0,
+      "symbol": "MA609",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-05-22",
+      "close": 2927.0,
+      "symbol": "MA609",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-05-25",
+      "close": 2844.0,
+      "symbol": "MA609",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-05-26",
+      "close": 2837.0,
+      "symbol": "MA609",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-05-27",
+      "close": 2804.0,
+      "symbol": "MA609",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-05-28",
+      "close": 2825.0,
+      "symbol": "MA609",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-05-29",
+      "close": 2793.0,
+      "symbol": "MA609",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-06-01",
+      "close": 2864.0,
+      "symbol": "MA609",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-06-02",
+      "close": 2890.0,
+      "symbol": "MA609",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-06-03",
+      "close": 2926.0,
+      "symbol": "MA609",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-06-04",
+      "close": 2877.0,
+      "symbol": "MA609",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-06-05",
+      "close": 2906.0,
+      "symbol": "MA609",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-06-08",
+      "close": 3049.0,
+      "symbol": "MA609",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-06-09",
+      "close": 2963.0,
+      "symbol": "MA609",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-06-10",
+      "close": 2972.0,
+      "symbol": "MA609",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-06-11",
+      "close": 3025.0,
+      "symbol": "MA609",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-06-12",
+      "close": 3010.0,
+      "symbol": "MA609",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-06-15",
+      "close": 2770.0,
+      "symbol": "MA609",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-06-16",
+      "close": 2684.0,
+      "symbol": "MA609",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-06-17",
+      "close": 2614.0,
+      "symbol": "MA609",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-06-18",
+      "close": 2566.0,
+      "symbol": "MA609",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-06-22",
+      "close": 2528.0,
+      "symbol": "MA609",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-06-23",
+      "close": 2493.0,
+      "symbol": "MA609",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-06-24",
+      "close": 2459.0,
+      "symbol": "MA609",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-06-25",
+      "close": 2429.0,
+      "symbol": "MA609",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-06-26",
+      "close": 2430.0,
+      "symbol": "MA609",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-06-29",
+      "close": 2460.0,
+      "symbol": "MA609",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-06-30",
+      "close": 2428.0,
+      "symbol": "MA609",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-07-01",
+      "close": 2350.0,
+      "symbol": "MA609",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-07-02",
+      "close": 2347.0,
+      "symbol": "MA609",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-07-03",
+      "close": 2377.0,
+      "symbol": "MA609",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-07-06",
+      "close": 2363.0,
+      "symbol": "MA609",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-07-07",
+      "close": 2404.0,
+      "symbol": "MA609",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-07-08",
+      "close": 2488.0,
+      "symbol": "MA609",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-07-09",
+      "close": 2488.0,
+      "symbol": "MA609",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-07-10",
+      "close": 2480.0,
+      "symbol": "MA609",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-07-13",
+      "close": 2516.0,
+      "symbol": "MA609",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-07-14",
+      "close": 2632.0,
+      "symbol": "MA609",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-07-15",
+      "close": 2648.0,
+      "symbol": "MA609",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-07-16",
+      "close": 2633.0,
+      "symbol": "MA609",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-07-17",
+      "close": 2630.0,
+      "symbol": "MA609",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-07-20",
+      "close": 2802.0,
+      "symbol": "MA609",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-07-21",
+      "close": 2707.0,
+      "symbol": "MA609",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-07-22",
+      "close": 2718.0,
+      "symbol": "MA609",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-07-23",
+      "close": 2756.0,
+      "symbol": "MA609",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-07-24",
+      "close": 2755.0,
+      "symbol": "MA609",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-07-27",
+      "close": 2610.0,
+      "symbol": "MA609",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-07-28",
+      "close": 2601.0,
+      "symbol": "MA609",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-07-29",
+      "close": 2649.0,
+      "symbol": "MA609",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-07-30",
+      "close": 2657.0,
+      "symbol": "MA609",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-07-31",
+      "close": 2618.0,
+      "symbol": "MA609",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-08-03",
+      "close": 2594.0,
+      "symbol": "MA609",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-08-04",
+      "close": 2586.0,
+      "symbol": "MA609",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-08-05",
+      "close": 2517.0,
+      "symbol": "MA609",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-08-06",
+      "close": 2495.0,
+      "symbol": "MA609",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-08-07",
+      "close": 2502.0,
+      "symbol": "MA609",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-08-10",
+      "close": 2531.0,
+      "symbol": "MA609",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-08-11",
+      "close": 2624.0,
+      "symbol": "MA609",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-08-12",
+      "close": 2606.0,
+      "symbol": "MA609",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-08-13",
+      "close": 2636.0,
+      "symbol": "MA609",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-08-14",
+      "close": 2675.0,
+      "symbol": "MA609",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-08-17",
+      "close": 2729.0,
+      "symbol": "MA609",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-08-18",
+      "close": 2776.0,
+      "symbol": "MA610",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-08-19",
+      "close": 2843.0,
+      "symbol": "MA610",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-08-20",
+      "close": 2837.0,
+      "symbol": "MA610",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-08-21",
+      "close": 2909.0,
+      "symbol": "MA610",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-08-24",
+      "close": 2914.0,
+      "symbol": "MA610",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-08-25",
+      "close": 2925.0,
+      "symbol": "MA610",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-08-26",
+      "close": 2769.0,
+      "symbol": "MA610",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-08-27",
+      "close": 2778.0,
+      "symbol": "MA610",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-08-28",
+      "close": 2840.0,
+      "symbol": "MA610",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-08-31",
+      "close": 2983.0,
+      "symbol": "MA610",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-09-01",
+      "close": 3069.0,
+      "symbol": "MA610",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-09-02",
+      "close": 3183.0,
+      "symbol": "MA610",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-09-03",
+      "close": 3158.0,
+      "symbol": "MA610",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-09-04",
+      "close": 3175.0,
+      "symbol": "MA610",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-09-07",
+      "close": 3212.0,
+      "symbol": "MA610",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-09-08",
+      "close": 3359.0,
+      "symbol": "MA610",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-09-09",
+      "close": 3411.0,
+      "symbol": "MA610",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-09-10",
+      "close": 3430.0,
+      "symbol": "MA610",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-09-11",
+      "close": 3380.0,
+      "symbol": "MA610",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-09-14",
+      "close": 3431.0,
+      "symbol": "MA610",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-09-15",
+      "close": 3429.0,
+      "symbol": "MA610",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-09-16",
+      "close": 3545.0,
+      "symbol": "MA610",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-09-17",
+      "close": 3476.0,
+      "symbol": "MA610",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-09-18",
+      "close": 3433.0,
+      "symbol": "MA610",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-09-21",
+      "close": 3488.0,
+      "symbol": "MA610",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-09-22",
+      "close": 3505.0,
+      "symbol": "MA610",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-09-23",
+      "close": 3349.0,
+      "symbol": "MA610",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-09-24",
+      "close": 3513.0,
+      "symbol": "MA610",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-09-28",
+      "close": 3545.0,
+      "symbol": "MA610",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-09-29",
+      "close": 3336.0,
+      "symbol": "MA611",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-09-30",
+      "close": 3384.0,
+      "symbol": "MA611",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-10-08",
+      "close": 3625.0,
+      "symbol": "MA611",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-10-09",
+      "close": 3835.0,
+      "symbol": "MA611",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-10-12",
+      "close": 3536.0,
+      "symbol": "MA611",
+      "source": "active_continuous"
+    },
+    {
+      "date": "2026-10-13",
+      "close": 3453.0,
+      "symbol": "MA611",
+      "source": "active_continuous"
+    }
+  ],
+  "signal_markers": [
+    {
+      "asof_date": "2026-09-16",
+      "entry_close": 3545.0,
+      "signal": "持有",
+      "t1_probability": 0.7030074228999931,
+      "t5_probability": 0.6525335378573284,
+      "display_symbol": "MA2610"
+    },
+    {
+      "asof_date": "2026-09-17",
+      "entry_close": 3476.0,
+      "signal": "持有",
+      "t1_probability": 0.6128267077194274,
+      "t5_probability": 0.7271741502212382,
+      "display_symbol": "MA2610"
+    },
+    {
+      "asof_date": "2026-10-13",
+      "entry_close": 3453.0,
+      "signal": "持有",
+      "t1_probability": 0.583289121254323,
+      "t5_probability": 0.5683496025679442,
+      "display_symbol": "MA2611"
+    }
+  ],
+  "comparisons": [
+    {
+      "signal_file": "data/workspace/ma_signal_20260917.json",
+      "generated_at": "2026-09-17T16:32:15",
+      "asof_date": "2026-09-16",
+      "contract": "MA610",
+      "display_symbol": "MA2610",
+      "entry_close": 3545.0,
+      "signal": "持有",
+      "t1_direction": "up",
+      "t1_probability": 0.7030074228999931,
+      "t1_predicted_price": 3606.5819787424275,
+      "t1_target_date": "2026-09-17",
+      "t1_actual_close": 3476.0,
+      "t1_actual_return": -0.019464033850493667,
+      "t1_direction_hit": false,
+      "t5_direction": "up",
+      "t5_probability": 0.6525335378573284,
+      "t5_predicted_price": 3700.874389443296,
+      "t5_target_date": "2026-09-23",
+      "t5_actual_close": 3349.0,
+      "t5_actual_return": -0.0552891396332863,
+      "t5_direction_hit": false,
+      "matured_t1": true,
+      "matured_t5": true
+    },
+    {
+      "signal_file": "data/workspace/ma_signal_20260921.json",
+      "generated_at": "2026-09-21T13:37:45",
+      "asof_date": "2026-09-17",
+      "contract": "MA610",
+      "display_symbol": "MA2610",
+      "entry_close": 3476.0,
+      "signal": "持有",
+      "t1_direction": "up",
+      "t1_probability": 0.6128267077194274,
+      "t1_predicted_price": 3522.696038573178,
+      "t1_target_date": "2026-09-18",
+      "t1_actual_close": 3433.0,
+      "t1_actual_return": -0.012370540851553535,
+      "t1_direction_hit": false,
+      "t5_direction": "up",
+      "t5_probability": 0.7271741502212382,
+      "t5_predicted_price": 3443.14222633412,
+      "t5_target_date": "2026-09-24",
+      "t5_actual_close": 3513.0,
+      "t5_actual_return": 0.01064441887226697,
+      "t5_direction_hit": true,
+      "matured_t1": true,
+      "matured_t5": true
+    },
+    {
+      "signal_file": "outputs/ma_signal_20261014.json",
+      "generated_at": "2026-10-14T11:56:05",
+      "asof_date": "2026-10-13",
+      "contract": "MA611",
+      "display_symbol": "MA2611",
+      "entry_close": 3453.0,
+      "signal": "持有",
+      "t1_direction": "up",
+      "t1_probability": 0.583289121254323,
+      "t1_predicted_price": 3511.868087475784,
+      "t1_target_date": null,
+      "t1_actual_close": null,
+      "t1_actual_return": null,
+      "t1_direction_hit": null,
+      "t5_direction": "up",
+      "t5_probability": 0.5683496025679442,
+      "t5_predicted_price": 3579.450666991401,
+      "t5_target_date": null,
+      "t5_actual_close": null,
+      "t5_actual_return": null,
+      "t5_direction_hit": null,
+      "matured_t1": false,
+      "matured_t5": false
+    }
+  ],
+  "available_signal_dates": [
+    "2026-09-16",
+    "2026-09-17",
+    "2026-10-13"
+  ],
+  "notes": [
+    "价格序列优先取 cache/methanol_tradeable_contract_active_series.csv（主力连续）。",
+    "预测 vs 真实：按 asof 后第1/第5个交易日收盘价对齐；未到期目标标记 matured_*=false。",
+    "仓库内可复原信号：workspace 2026-09-16/17 与 outputs 2026-10-13/14（两日 asof 均为 2026-10-13）。"
+  ]
+}
