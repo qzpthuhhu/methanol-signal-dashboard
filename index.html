@@ -93,8 +93,42 @@
         <h2>预测 vs 真实</h2>
         <span class="hint" id="history-meta"></span>
       </div>
+
+      <div class="chart-toolbar" id="chart-toolbar">
+        <div class="toolbar-group">
+          <span class="toolbar-label">日期范围</span>
+          <div class="range-presets" id="range-presets">
+            <button type="button" data-range="all" class="active">全部</button>
+            <button type="button" data-range="30">近1月</button>
+            <button type="button" data-range="90">近3月</button>
+            <button type="button" data-range="180">近半年</button>
+          </div>
+          <label class="date-field">起
+            <input type="date" id="chart-from" />
+          </label>
+          <label class="date-field">止
+            <input type="date" id="chart-to" />
+          </label>
+          <button type="button" id="chart-apply-range" class="btn-secondary">应用</button>
+        </div>
+        <div class="toolbar-group">
+          <label class="toggle">
+            <input type="checkbox" id="toggle-candle" />
+            <span>显示 K 线（默认关）</span>
+          </label>
+          <label class="toggle">
+            <input type="checkbox" id="toggle-pred-t1" checked />
+            <span>T+1 预测点</span>
+          </label>
+          <label class="toggle">
+            <input type="checkbox" id="toggle-pred-t5" checked />
+            <span>T+5 预测点</span>
+          </label>
+        </div>
+      </div>
+
       <div class="chart-wrap">
-        <div id="candle-chart" class="candle-chart" role="img" aria-label="甲醇主力 K 线与预测标记"></div>
+        <div id="price-chart" class="price-chart" role="img" aria-label="甲醇主力收盘价与预测目标点"></div>
       </div>
       <div class="table-scroll">
         <table id="cmp-table">

@@ -30,7 +30,7 @@ python3 -m http.server 8080
 3. 如需更换密码：用离线脚本对 `salt + password` 做 SHA-256，更新 `js/auth-config.js` 中的 `hash`（切勿提交明文密码）。
 4. `git add` → `commit` → `push origin main`；Pages 通常一两分钟内刷新。
 
-预测 vs 真实图使用 [lightweight-charts](https://github.com/tradingview/lightweight-charts) 渲染蜡烛图（K 线），并叠加 T+1/T+5 目标价与方向标记；未到期样本不显示命中/未中。
+预测 vs 真实图默认展示**真实收盘价曲线** + **T+1/T+5 预测目标价散点**（落在目标日，便于对照真实 vs 预测）；K 线可选且默认关闭。支持日期范围（全部 / 近1月 / 近3月 / 近半年或自定义起止）。未到期样本在表格中不显示命中/未中。
 
 ## 数据文件
 
